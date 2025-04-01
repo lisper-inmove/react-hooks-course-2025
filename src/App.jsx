@@ -1,10 +1,10 @@
 import "./App.css";
-import { StateExample } from "./hooks/use-state/index";
+import { EffectExample } from "./hooks/use-effect";
 
 function App() {
   return (
     <>
-      <StateExample />
+      <EffectExample />
     </>
   );
 }
