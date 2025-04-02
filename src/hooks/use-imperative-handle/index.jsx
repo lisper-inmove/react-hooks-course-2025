@@ -1,5 +1,11 @@
 import React, { useRef, useImperativeHandle, forwardRef } from "react";
 
+/*
+  相当于是从父组件传了一个变量到子组件，子组件为它关联了两个函数
+  这样就能在父组件中调用在子组件中定义的函数了
+  在子组件中可以控制给父组件暴露什么内容。可以在子组件中隐藏实现细节。
+**/
+
 // Parent Component
 export const ImperativeHandleExample = () => {
   const inputRef = useRef();
