@@ -25,13 +25,30 @@ const ChildToggle = () => {
   );
 };
 
-// Child Component to Display State
-const ChildDisplay = () => {
-  const { isToggle } = useContext(GlobalStateContext);
+// // Child Component to Display State
+// const ChildDisplay = () => {
+//   const { isToggle } = useContext(GlobalStateContext);
 
+//   return (
+//     <div>
+//       <p>Current State: {isToggle ? "ON" : "OFF"}</p>
+//     </div>
+//   );
+// };
+
+const ChildDisplay = () => {
   return (
-    <div>
-      <p>Current State: {isToggle ? "ON" : "OFF"}</p>
-    </div>
+    <GlobalStateContext.Consumer>
+      {({ isToggle, setIsToggle }) => {
+        console.log(isToggle);
+        console.log(setIsToggle);
+        return (
+          <section>
+            <li>{isToggle ? "Open" : "Close"}</li>
+            <button onClick={() => setIsToggle((prev) => !prev)}>Toggle</button>
+          </section>
+        );
+      }}
+    </GlobalStateContext.Consumer>
   );
 };

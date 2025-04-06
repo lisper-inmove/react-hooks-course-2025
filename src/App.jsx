@@ -1,10 +1,10 @@
 import "./App.css";
-import { ImperativeHandleExample } from "./hooks/use-imperative-handle";
+import { ContextExample } from "./hooks/use-context";
 
 function App() {
   return (
     <>
-      <ImperativeHandleExample />
+      <ContextExample />
     </>
   );
 }
